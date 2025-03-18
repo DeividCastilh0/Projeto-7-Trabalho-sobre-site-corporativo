@@ -29,25 +29,20 @@
             <li>Faça seu Café</li>
         </ul>
     </nav>
-    <div class="informacoesLocal">
-        <div>
-            <img class="sobreImg" src="img/banner.png" alt="">
-        </div>
-        <div class="sobre">
-            <h2>Café Brasil - Uma Experiência Única em Cafés</h2>
-            <p>O Café Brasil é uma charmosa loja especializada em cafés selecionados de diversas partes do mundo, além
-                de grãos especiais vindos de Minas Gerais. Nosso grande diferencial é o exclusivo conceito "Monte seu
-                Café", onde você pode criar sua própria combinação, escolhendo a porcentagem ideal de diferentes tipos
-                de café, como o intenso café americano, o aromático café arábico e o tradicional café mineiro.
 
-                Venha explorar novos sabores e descobrir a mistura perfeita para o seu paladar no Café Brasil! ☕✨</p>
-        </div>
-
-    </div>
     <h1>Cafés especiais</h1>
+
     <div class="cafes">
 
-        <div class="cafe">
+        <div>
+            <h3>Selecione o cafe</h3>
+            <select name="cafes" id="cafes">
+                <option value="vazio"></option>
+                <option value="cafe1">Cafe 1</option>
+                <option value="cafe2">Cafe 2</option>
+            </select>
+        </div>
+        <div class="cafe" id="cafe1" style="display: none;">
             <div>
                 <h3> Arábica (Coffea arabica)</h3>
                 <img src="img/cafe1_.jpg" alt="">
@@ -68,10 +63,9 @@
             </div>
 
         </div>
-        <div class="cafe">
-
+        <div class="cafe" id="cafe2" style="display: none;">
             <div>
-                <h3> Arábica (Coffea arabica)</h3>
+                <h3> Arábica Preto</h3>
                 <img src="img/cafe1_.jpg" alt="">
 
                 <h4>Sobre</h4>
@@ -85,29 +79,10 @@
                     <li> Cultivado em altitudes elevadas</li>
                     <li> Sabor mais adocicado e ácido</li>
                 </ul>
+                <p>R$ 89,00</p>
                 <button class="btnComprar">Comprar</button>
             </div>
 
-        </div>
-        <div class="cafe">
-            <div>
-                <h3> Arábica (Coffea arabica)</h3>
-                <img src="img/cafe1_.jpg" alt="">
-
-                <h4>Sobre</h4>
-                <p>O café brasileiro é um dos mais vendidos , pelo seu sabor e tonalidade clara, ele é plantando no alto
-                    do
-                    morro</p>
-                <h5>Detalhes</h5>
-                <ul>
-                    <li>Mais aromático e saboroso</li>
-                    <li> Menos cafeína (cerca de 1,2%)</li>
-                    <li> Cultivado em altitudes elevadas</li>
-                    <li> Sabor mais adocicado e ácido</li>
-                </ul>
-
-            </div>
-            <button class="btnComprar">Comprar</button>
         </div>
 
     </div>
@@ -127,7 +102,7 @@
             <p>Desenvolvido por Café Brasil</p>
         </div>
     </footer>
-
+    <script src="index.js"></script>
 </body>
 
 </html>
