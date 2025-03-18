@@ -50,9 +50,9 @@ body {
 }
 
 .informacoesLocal {
- 
+
     border: 1px solid #4d3721;
-    margin-top: 05px;   
+    margin-top: 05px;
 }
 
 .sobreImg {
@@ -60,15 +60,83 @@ body {
     margin-top: 10px;
     height: 450px;
     filter: blur(5px);
-    
+
 }
-.sobre{
+
+.sobre {
     position: absolute;
-    top:80%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 25px;
     font-family: "Roboto Condensed", sans-serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.rodape {
+    background-color: #4d3721;
+    height: 50px;
+    max-height: 50px;
+    margin-bottom: 0px;
+    ul {
+        display: flex;
+        margin: 10px;
+        list-style: none;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+    li {
+        margin: 10px;
+        display: flex;
+        margin: 10px;
+        list-style: none;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+    }
+
+    li img {
+        width: 20px;
+        text-align: center;
+
+    }
+}
+
+.cafe {
+    background-color: #bb9469;
+    border: 1px solid #4d3721;
+    margin-top: 120px;
+    width: 300px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-left: 100px;
+
+    img {
+        margin-top: 25px;
+        width: 180px;
+        height: 180px;
+        border-radius: 25px;
+        border: 2px solid #4d3721;
+    }
+
+    ul {
+        text-align: left;
+
+    }
+
+    h3,
+    h5 {
+        text-align: left;
+        margin: 10px;
+    }
+}
+
+.cafes {
+
+    display: flex;
+
 }
