@@ -58,6 +58,7 @@ function exibirCarrinho() {
     document.querySelectorAll(".remover").forEach(botao => {
         botao.addEventListener("click", removerItem);
     });
+    console.log(carrinho)
 
     atualizarContadorCarrinho();
 }

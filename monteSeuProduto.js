@@ -25,7 +25,7 @@ const cafes = {
 function atualizarInfo() {
     const cafe1 = document.getElementById("cafe1").value;
     const cafe2 = document.getElementById("cafe2").value;
-    
+
     const chaveMistura = [cafe1, cafe2].sort().join("-");
 
     if (cafe1 === "none" || cafe2 === "none") {
@@ -216,5 +216,5 @@ const misturas = [
     }
 ];
 
-a
+
 
