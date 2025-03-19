@@ -32,59 +32,92 @@
 
     <h1>Cafés especiais</h1>
 
-    <div class="cafes">
 
-        <div>
-            <h3>Selecione o cafe</h3>
-            <select name="cafes" id="cafes">
-                <option value="vazio"></option>
-                <option value="cafe1">Cafe 1</option>
-                <option value="cafe2">Cafe 2</option>
-            </select>
-        </div>
-        <div class="cafe" id="cafe1" style="display: none;">
-            <div>
-                <h3> Arábica (Coffea arabica)</h3>
-                <img src="img/cafe1_.jpg" alt="">
+    <div class="produtos">
+        <div class="produto">
 
-                <h4>Sobre</h4>
-                <p>O café brasileiro é um dos mais vendidos , pelo seu sabor e tonalidade clara, ele é plantando no alto
-                    do
-                    morro</p>
-                <h5>Detalhes</h5>
-                <ul>
-                    <li>Mais aromático e saboroso</li>
-                    <li> Menos cafeína (cerca de 1,2%)</li>
-                    <li> Cultivado em altitudes elevadas</li>
-                    <li> Sabor mais adocicado e ácido</li>
-                </ul>
-                <p>R$ 89,00</p>
-                <button class="btnComprar">Comprar</button>
+            <div class="produtoName"> Café Arábica</div>
+            <img src="img/cafeArabico.jpeg" alt="">
+
+            <h4>Sobre</h4>
+            <p>OO café Arábica é um dos mais valorizados no mundo, devido ao seu sabor suave e complexo. Ele é
+                cultivado em altitudes elevadas e possui menos amargor.</p>
+            <h5>Detalhes</h5>
+            <ul>
+                <li>Mais aromático e saboroso</li>
+                <li>Média concentração de cafeína (cerca de 1,2%)</li>
+                <li>Cultivado acima de 1.000 metros de altitude</li>
+                <li>Sabor mais adocicado e ácido</li>
+            </ul>
+            <div class="valorItem">
+                <p class="preco1">R$</p>
+                <p class="preco">99,00</p>
             </div>
+            <label for="quantidade">Quantidade</label>
+            <input type="number" name="quantidade" class="quantidade">
+            <button class="btnComprar" onclick="adicionarCarrinho()">Adicionar produto</button>
 
         </div>
-        <div class="cafe" id="cafe2" style="display: none;">
-            <div>
-                <h3> Arábica Preto</h3>
-                <img src="img/cafe1_.jpg" alt="">
+        <div class="produto">
 
-                <h4>Sobre</h4>
-                <p>O café brasileiro é um dos mais vendidos , pelo seu sabor e tonalidade clara, ele é plantando no alto
-                    do
-                    morro</p>
-                <h5>Detalhes</h5>
-                <ul>
-                    <li>Mais aromático e saboroso</li>
-                    <li> Menos cafeína (cerca de 1,2%)</li>
-                    <li> Cultivado em altitudes elevadas</li>
-                    <li> Sabor mais adocicado e ácido</li>
-                </ul>
-                <p>R$ 89,00</p>
-                <button class="btnComprar">Comprar</button>
+            <div class="produtoName">Café Mineiro</div>
+            <img src="img/cafeMineiro.png" alt="">
+
+            <h4>Sobre</h4>
+            <p>O café mineiro é tradicional no Brasil, conhecido por seu sabor encorpado e notas achocolatadas. Ele
+                é cultivado nas montanhas de Minas Gerais.</p>
+            <h5>Detalhes</h5>
+            <ul>
+                <li>Sabor equilibrado com baixa acidez</li>
+                <li>Média concentração de cafeína (cerca de 1,3%)</li>
+                <li>Cultivado entre 800 e 1.200 metros de altitude</li>
+                <li>Notas de chocolate e nozes</li>
+            </ul>
+            <div class="valorItem">
+                <p class="preco1">R$</p>
+                <p class="preco">49,00</p>
             </div>
+            <label for="quantidade">Quantidade</label>
+            <input type="number" name="quantidade" class="quantidade">
+            <button class="btnComprar" onclick="adicionarCarrinho()">Adicionar produto</button>
+
 
         </div>
+        <div class="produto">
 
+            <div class="produtoName"> Café Europeu</div>
+            <img src="img/cafeEuropeu.jpeg" alt="">
+
+            <h4>Sobre</h4>
+            <p>O café europeu é geralmente mais encorpado e intenso, com torra mais escura. Ele é apreciado por seu
+                sabor forte e presença marcante.</p>
+            <h5>Detalhes</h5>
+            <ul>
+                <li>Sabor mais amargo e intenso</li>
+                <li>Maior concentração de cafeína (cerca de 1,5%)</li>
+                <li>Torra escura para um corpo mais encorpado</li>
+                <li>Notas de caramelo e especiarias</li>
+            </ul>
+            <div class="valorItem">
+                <p class="preco1">R$</p>
+                <p class="preco">70,00</p>
+            </div>
+            <label for="quantidade">Quantidade</label>
+            <input type="number" name="quantidade" class="quantidade">
+            <button class="btnComprar" onclick="adicionarCarrinho()">Adicionar produto</button>
+        </div>
+
+
+    </div>
+
+    <div class="carrinho">
+        <!-- <img src="img/carrinho.png" alt=""> -->
+        <h3>Resumo do pedido</h3>
+        <div class="item" id="item"></div>
+        <div class="contadorCarrinho" id="contadorCarrinho"></div>
+        <div class="total" id="total"></div>
+
+        <button>Finalizar compra</button>
     </div>
 
     <footer>

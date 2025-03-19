@@ -1,0 +1,57 @@
+A funcão está adicionando de forma errada,quero um total e total de itens, e a opção de remover item do carrinho 
+
+
+let carrinho = []
+function adicionarCarrinho() {
+
+
+    let botoes = document.querySelectorAll(".btnComprar")
+
+    for (let i = 0; i < botoes.length; i++) {
+
+        botoes[i].addEventListener("click", function () {
+            let produtoElemento = this.closest(".produto") // Encontra o produto clicado
+            let produtoName = produtoElemento.querySelector(".produtoName").innerText
+            let quantidade = parseInt(produtoElemento.querySelector(".quantidade").value) || 1
+            let preco = parseFloat(produtoElemento.querySelector(".preco").innerText)
+            let precoTotal = quantidade * preco
+            // Verifica se o produto já está no carrinho
+            let produtoExistente = carrinho.find(item => item.produto === produtoName)
+
+            if (produtoExistente) {
+                produtoExistente.quantidade += quantidade // Atualiza a quantidade
+            } else {
+                carrinho.push({
+                    produto: produtoName,
+                    quantidade: quantidade,
+                    preco: preco,
+                    precoTotal: precoTotal
+                })
+            }
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        
+            exibirCarrinho()
+            atualizarContadorCarrinho()
+            
+        })
+
+    }
+}
+
+function exibirCarrinho() {
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];   
+    let resumoItens = document.querySelector(".item")
+    carrinho.forEach(produto => {
+        let item = document.createElement("div")
+       
+        item.innerText = ${produto.quantidade}x ${produto.produto} - R$ ${produto.precoTotal.toFixed(2)}
+        resumoItens.appendChild(item)
+        console.log(produto.produtoName)
+    });
+
+}
+// Atualiza a contagem total de itens no carrinho
+function atualizarContadorCarrinho() {
+    let totalItens = carrinho.reduce((total, item) => total + item.quantidade, 0)
+    document.querySelector(".contadorCarrinho").innerText = totalItens
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte seu Café</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="monteCafe.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li>Quem somos</li>
+            <li>Produtos</li>
+            <li>Estados</li>
+            <li>Home</li>
+        </ul>
+    </nav>
+    <div class="tutorial">
+        <h2> No Café Brasil, você tem a liberdade de criar a sua própria experiência única de sabor! Com a opção "Monte
+            seu Café", você pode combinar dois tipos de café para criar um novo blend ou reproduzir um sabor já
+            conhecido. ☕</h2>
+    </div>
+    <div class="conteiner">
+        <div class="cafe">
+            <h2>Escolha o Primeiro tipo de Café:</h2>
+            <select id="cafe1" class="select" onchange="exibirCafe(event)">
+                <option value="none"></option>
+                <option value="arabico">Café Arábica</option>
+                <option value="europeu">Café Europeu</option>
+                <option value="mineiro">Café Mineiro</option>
+            </select>
+          
+            <div class="result" id="result">
+            </div>
+
+        </div>
+        <div class="cafe">
+            <h2>Selecione o Segundo tipo de Café</h2>
+            <select id="cafe2" class="select" onchange="exibirCafe(event)">
+                <option value="none"></option>
+                <option value="arabico">Café Arábica</option>
+                <option value="europeu">Café Europeu</option>
+                <option value="mineiro">Café Mineiro</option>
+            </select>
+              
+            <div class="result" id="result">
+            </div>
+        </div>
+        <div class="mfinal">
+            <h3 id="resultadoNome">Resultado:</h3>
+            <div id="resultadoContainer" style="display: none;">
+                <img id="resultadoImagem" src="" alt="">
+                <p id="resultadoDescricao"></p>
+                <p id="resultadoPreco"></p>
+                <button id="comprarBtn" style="display: none;" onclick="comprar()">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="monteSeuProduto.js"></script>
+    <!-- <script src="index.js"></script> -->
+</body>
+
+</html>
