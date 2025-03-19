@@ -259,3 +259,11 @@ footer {
     padding: 10px;
     border-radius: 10px;
 }
+a{
+    text-decoration: none;
+    color: #4d3721;
+}
+a:hover{
+    text-decoration: none;
+    color: #fdfdfd;
+}
